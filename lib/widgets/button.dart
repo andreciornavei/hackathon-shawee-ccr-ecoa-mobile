@@ -1,14 +1,14 @@
 import 'package:ecoar_mobile/utils/colors.dart';
 import 'package:flutter/material.dart';
 
-class EcoarButton extends StatelessWidget {
+class Button extends StatelessWidget {
   final Function action;
   final String label;
   final IconData icon;
   final Color backgroundColor;
   final Color backgroundIcon;
   final Color foregroundColor;
-  EcoarButton({
+  Button({
     this.action,
     this.label,
     this.icon,
@@ -24,7 +24,7 @@ class EcoarButton extends StatelessWidget {
       color: this.backgroundColor,
       disabledColor: AppColors.DARK.withOpacity(0.2),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(100),
+        borderRadius: BorderRadius.circular(8),
       ),
       padding: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
       child: Row(
@@ -50,7 +50,7 @@ class EcoarButton extends StatelessWidget {
               color: action == null
                   ? backgroundIcon?.withOpacity(0.3) ?? AppColors.ECOAR_ORANGE.withOpacity(0.3)
                   : backgroundIcon ?? AppColors.ECOAR_ORANGE,
-              borderRadius: BorderRadius.circular(40),
+              borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(
               this.icon,

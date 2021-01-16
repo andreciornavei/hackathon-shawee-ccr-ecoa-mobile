@@ -1,7 +1,7 @@
 import 'package:ecoar_mobile/pages/login/controller.dart';
 import 'package:ecoar_mobile/utils/colors.dart';
 import 'package:ecoar_mobile/widgets/ecoar_appbar.dart';
-import 'package:ecoar_mobile/widgets/ecoar_button.dart';
+import 'package:ecoar_mobile/widgets/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
@@ -24,7 +24,7 @@ class LoginView extends StatelessWidget {
               children: <Widget>[
                 Text("Ecoar Sample Project"),
                 SizedBox(height: 15),
-                EcoarButton(
+                Button(
                   action: () => Get.toNamed("/panel"),
                   label: "Login",
                   icon: Feather.arrow_right,

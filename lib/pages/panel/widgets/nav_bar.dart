@@ -18,8 +18,7 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width,
-      height: 50,
+      height: 60,
       decoration: BoxDecoration(
         color: AppColors.WHITE,
         boxShadow: [
@@ -29,18 +28,20 @@ class NavBar extends StatelessWidget {
           ),
         ],
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: items.map((item) {
-          var index = items.indexOf(item);
-          return Expanded(
-            flex: 1,
-            child: GestureDetector(
-              onTap: () => this.setSelectedIndex(index),
-              child: NavItem(item, this.selectedIndex == index),
-            ),
-          );
-        }).toList(),
+      child: SafeArea(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: items.map((item) {
+            var index = items.indexOf(item);
+            return Expanded(
+              flex: 1,
+              child: GestureDetector(
+                onTap: () => this.setSelectedIndex(index),
+                child: NavItem(item, this.selectedIndex == index),
+              ),
+            );
+          }).toList(),
+        ),
       ),
     );
   }
