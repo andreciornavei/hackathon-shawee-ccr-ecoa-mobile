@@ -16,7 +16,7 @@ class CourseView extends StatelessWidget {
       case "section":
         return SectionCard(item['data']);
       case "class":
-        return ClassCard(item['data']);
+        return ClassCard(item['data'], item['action']);
     }
     return Text("unknwon type");
   }
@@ -38,7 +38,7 @@ class CourseView extends StatelessWidget {
           ],
           actions: <Widget>[
             Text(
-              "andre.ciornavei",
+              "john.doe",
               style: TextStyle(
                 color: AppColors.WHITE,
                 fontWeight: FontWeight.w500,
@@ -131,7 +131,17 @@ class CourseView extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: BottomPlayer(controller.course),
+        // bottomNavigationBar: Obx(
+        //   () => Visibility(
+        //     visible: controller.selectedClass != null,
+        //     child: controller.selectedClass != null
+        //         ? BottomPlayer(
+        //             controller.course,
+        //             controller.runClass(controller.selectedClass),
+        //           )
+        //         : SizedBox.shrink(),
+        //   ),
+        // ),
       ),
     );
   }

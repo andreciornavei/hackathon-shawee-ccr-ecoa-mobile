@@ -5,14 +5,16 @@ class ClassModel {
     int id,
     String title,
     String description,
-    String mediaUrl,    
-    int position
+    String mediaId,    
+    int position,
+    int minutes
   }) {
     this.id = id;
     this.title = title;
     this.description = description;
-    this.mediaUrl = mediaUrl;
+    this.mediaId = mediaId;
     this.position = position;
+    this.minutes = minutes;
   }
   RxInt _id = RxInt();
   set id(int value) => _id.value = value;
@@ -30,11 +32,15 @@ class ClassModel {
   set producer(String value) => _producer.value = value;
   String get producer => _producer.value;
 
-  RxString _mediaUrl = RxString();
-  set mediaUrl(String value) => _mediaUrl.value = value;
-  String get mediaUrl => _mediaUrl.value;
+  RxString _mediaId = RxString();
+  set mediaId(String value) => _mediaId.value = value;
+  String get mediaId => _mediaId.value;
 
   RxInt _position = RxInt();
   set position(int value) => _position.value = value;
   int get position => _position.value;
+  
+  RxInt _minutes = RxInt();
+  set minutes(int value) => _minutes.value = value;
+  int get minutes => _minutes.value;
 }

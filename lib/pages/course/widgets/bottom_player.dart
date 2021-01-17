@@ -7,7 +7,8 @@ import 'package:flutter_icons/flutter_icons.dart';
 
 class BottomPlayer extends StatelessWidget {
   final CourseModel course;
-  BottomPlayer(this.course);
+  final Function onPlay;
+  BottomPlayer(this.course, this.onPlay);
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +76,7 @@ class BottomPlayer extends StatelessWidget {
             child: ButtonIcon(
               icon: Feather.play,
               color: AppColors.DARK,
-              action: () => {},
+              action: this.onPlay,
               fullRounded: true,
             ),
           ),

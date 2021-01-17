@@ -35,10 +35,10 @@ class AccountView extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       H1(
-                        "André Ciornavei",
+                        "John Doe",
                         size: 21,
                       ),
-                      P("andre.ciornavei@gmail.com"),
+                      P("johndoe@gmail.com"),
                     ],
                   ),
                   Avatar(
@@ -99,7 +99,7 @@ class AccountView extends StatelessWidget {
                 child: Column(
                   children: <Widget>[
                     CardOption(
-                      onPressed: () {},
+                      onPressed: () => Get.until((route) => route.isFirst),
                       label: "Sair do aplicativo",
                       prefixIcon: Feather.log_out,
                       prefixColor: AppColors.ECOAR_RED,

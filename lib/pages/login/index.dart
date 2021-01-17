@@ -15,20 +15,20 @@ class LoginView extends StatelessWidget {
       init: LoginController(),
       builder: (controller) {
         return Scaffold(
-          backgroundColor: AppColors.BACKGROUND_COLOR,
+          backgroundColor: AppColors.PURPLE,
           body: SingleChildScrollView(
             child: Stack(
               children: <Widget>[
                 Positioned(
-                  left: -100,
+                  bottom: 0,
                   child: Opacity(
-                    opacity: 0.02,
+                    opacity: 0.05,
                     child: Container(
-                      width: 400,
-                      height: 400,
+                      width: 600,
+                      height: 600,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/images/watermark.png"),
+                          image: AssetImage("assets/images/icon.png"),
                           fit: BoxFit.contain,
                         ),
                       ),
@@ -40,16 +40,15 @@ class LoginView extends StatelessWidget {
                     height: (MediaQuery.of(context).size.height - 30),
                     padding: EdgeInsets.all(25),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
-                        Image.asset("assets/images/logo1.png", height: 124),
-                        Column(
-                          children: <Widget>[
-                            H1("Empreendedorismo para autistas"),
-                            SizedBox(height: 10),
-                            P("Ajudamos pessoas com TEA a se integrar no mercado do empreendedorismo por meio do ensino."),
-                          ],
+                        SizedBox.shrink(),
+                        Image.asset("assets/images/logo1.png", height: 128),
+                        H1(
+                          "EMPREENDEDORISMO PARA AUTISTAS",
+                          color: AppColors.WHITE,
+                          alignment: TextAlign.center,
                         ),
                         Column(
                           children: <Widget>[
@@ -65,7 +64,8 @@ class LoginView extends StatelessWidget {
                                     ? Feather.eye
                                     : Feather.eye_off,
                                 suffixAction: () => {
-                                  controller.showPassword = !controller.showPassword
+                                  controller.showPassword =
+                                      !controller.showPassword
                                 },
                               ),
                             ),
@@ -74,7 +74,14 @@ class LoginView extends StatelessWidget {
                               action: () => Get.toNamed("/panel"),
                               label: "Acessar plataforma",
                               icon: Feather.log_in,
-                              backgroundColor: AppColors.PURPLE,
+                              backgroundColor: AppColors.ECOAR_PURPLE,
+                              foregroundColor: AppColors.WHITE,
+                            ),
+                            SizedBox(height: 5),
+                            Button(
+                              action: () => {},
+                              label: "Esqueci minha senha",
+                              fontWeight: FontWeight.w500,
                               foregroundColor: AppColors.WHITE,
                             )
                           ],

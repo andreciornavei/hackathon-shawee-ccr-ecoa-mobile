@@ -19,8 +19,9 @@ class SectionCard extends StatelessWidget {
                 width: 24,
                 height: 24,
                 decoration: BoxDecoration(
-                    color: AppColors.PURPLE,
-                    borderRadius: BorderRadius.circular(6)),
+                  color: AppColors.PURPLE,
+                  borderRadius: BorderRadius.circular(6),
+                ),
                 alignment: Alignment.center,
                 child: Text(
                   "#",

@@ -6,7 +6,15 @@ class H1 extends StatelessWidget {
   final EdgeInsets margin;
   final MaterialColor color;
   final double size;
-  H1(this.value, {this.size = 24, this.margin, this.color});
+  final TextAlign alignment;
+
+  H1(
+    this.value, {
+    this.size = 24,
+    this.margin,
+    this.color,
+    this.alignment: TextAlign.left,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +22,7 @@ class H1 extends StatelessWidget {
       padding: this.margin ?? EdgeInsets.zero,
       child: Text(
         this.value,
+        textAlign: alignment,
         style: TextStyle(
           color: this.color ?? AppColors.DARK,
           fontSize: this.size,
