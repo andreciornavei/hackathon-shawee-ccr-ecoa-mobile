@@ -11,7 +11,7 @@ class PanelView extends StatelessWidget {
     return GetBuilder<PanelController>(
       init: PanelController(),
       builder: (controller) => Scaffold(
-        backgroundColor: AppColors.BACKGROUND_COLOR,
+        backgroundColor: AppColors.WHITE,
         appBar: EcoarAppBar(
           leadings: <Widget>[
             Image.asset("assets/images/icon2.png", height: 32),
@@ -28,7 +28,7 @@ class PanelView extends StatelessWidget {
         ),
         body: Obx(
           () => Container(
-            color: AppColors.BACKGROUND_COLOR,
+            color: AppColors.WHITE,
             child: controller.selectedPage,
           ),
         ),

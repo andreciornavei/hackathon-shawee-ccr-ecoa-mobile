@@ -1,4 +1,5 @@
 import 'package:ecoar_mobile/models/homeitem.model.dart';
+import 'package:ecoar_mobile/pages/home/widgets/course_card.dart';
 import 'package:ecoar_mobile/widgets/h1.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -21,6 +22,15 @@ class HomeView extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.only(left: 25),
             child: Row(children: item?.data ?? []),
+          ),
+        );
+      case 'courses':
+        return SliverList(
+          delegate: SliverChildBuilderDelegate(
+            (context, index) {
+              return CourseCard(item?.data[index], action: () => { Get.toNamed("/course/${item?.data[index].id}") });
+            },
+            childCount: item?.data?.length ?? 0,
           ),
         );
     }

@@ -12,6 +12,8 @@ class AppColors {
   // ignore: non_constant_identifier_names
   static final MaterialColor LIGHT_GREY = _factoryColor(0xffd8d8d8);
   // ignore: non_constant_identifier_names
+  static MaterialColor MUTE = AppColors._factoryColor(0xFF9EA4B9);
+  // ignore: non_constant_identifier_names
   static final MaterialColor DARK = _factoryColor(0xff3a3a3a);
   // ignore: non_constant_identifier_names
   static final MaterialColor WHITE = _factoryColor(0xffffffff);

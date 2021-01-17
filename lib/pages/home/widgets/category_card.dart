@@ -13,14 +13,13 @@ class CategoryCard extends StatelessWidget {
     return GestureDetector(
       onTap: action,
       child: Container(
-        width: 130,
-        height: 130,
+        width: 100,
+        height: 100,
         padding: EdgeInsets.only(left: 0, top: 0, right: 0, bottom: 0),
         margin: EdgeInsets.only(right: 25, bottom: 5),
         decoration: BoxDecoration(
-          color: AppColors.WHITE,
+          color: AppColors.LIGHT,
           borderRadius: BorderRadius.circular(5),
-          border: Border.all(color: AppColors.PURPLE, width: 2),
           boxShadow: <BoxShadow>[
             BoxShadow(
               blurRadius: 1,
@@ -33,18 +32,20 @@ class CategoryCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Icon(
+              item.icon,
+              size: 32,
+              color: AppColors.PURPLE,
+            ),
+            SizedBox(height: 10),
             Text(
               this.item.name,
               style: TextStyle(
-                color: AppColors.DARK,
+                color: AppColors.PURPLE,
                 fontWeight: FontWeight.bold,
-                fontSize: 14,
+                fontSize: 12,
               ),
             ),
-            Image.asset(
-              "assets/images/icon.png",
-              height: 96,
-            )                        
           ],
         ),
       ),
