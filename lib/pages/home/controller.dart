@@ -17,10 +17,12 @@ class HomeController extends GetxController {
     HomeItemModel(
       type: 'categories',
       data: [
-        CategoryCard(CategoryModel(id: 1, name: "Categoria 1", icon: Feather.activity), () => {}),
-        CategoryCard(CategoryModel(id: 2, name: "Categoria 2", icon: Feather.airplay), () => {}),
-        CategoryCard(CategoryModel(id: 3, name: "Categoria 3", icon: Feather.anchor), () => {}),
-        CategoryCard(CategoryModel(id: 4, name: "Categoria 4", icon: Feather.umbrella), () => {}),
+        CategoryCard(CategoryModel(id: 1, name: "Empreendedorismo", icon: Feather.activity), () => {}),
+        CategoryCard(CategoryModel(id: 2, name: "Administração", icon: Feather.airplay), () => {}),
+        CategoryCard(CategoryModel(id: 3, name: "Vendas", icon: Feather.anchor), () => {}),
+        CategoryCard(CategoryModel(id: 4, name: "Operações", icon: Feather.umbrella), () => {}),
+        CategoryCard(CategoryModel(id: 5, name: "Mídia", icon: Feather.battery), () => {}),
+        CategoryCard(CategoryModel(id: 6, name: "Industria", icon: Feather.globe), () => {}),
       ],
     ),
     HomeItemModel(

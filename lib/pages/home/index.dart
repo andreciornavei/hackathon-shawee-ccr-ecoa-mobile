@@ -18,17 +18,24 @@ class HomeView extends StatelessWidget {
         );
       case 'categories':
         return SliverToBoxAdapter(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.only(left: 25),
-            child: Row(children: item?.data ?? []),
+          child: SizedBox(
+            height: 100,
+            child: ListView.separated(
+              scrollDirection: Axis.horizontal,
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              itemBuilder: (BuildContext context, int index) => item?.data[index],
+              separatorBuilder: (context, index) => SizedBox(width: 20),
+              itemCount: item?.data?.length ?? 0,
+            ),
           ),
         );
       case 'courses':
         return SliverList(
           delegate: SliverChildBuilderDelegate(
             (context, index) {
-              return CourseCard(item?.data[index], action: () => { Get.toNamed("/course/${item?.data[index].id}") });
+              return CourseCard(item?.data[index],
+                  action: () =>
+                      {Get.toNamed("/course/${item?.data[index].id}")});
             },
             childCount: item?.data?.length ?? 0,
           ),

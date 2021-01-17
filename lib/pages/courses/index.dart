@@ -21,7 +21,7 @@ class CoursesView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     H1("Meus cursos"),
-                    P("Gerencie os cursos que você participa")
+                    P("Gerencie os cursos que você participa.")
                   ],
                 ),
               ),

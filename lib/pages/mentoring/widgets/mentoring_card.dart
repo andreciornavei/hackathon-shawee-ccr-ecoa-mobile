@@ -1,13 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:ecoar_mobile/models/course.model.dart';
+import 'package:ecoar_mobile/models/mentoring.model.dart';
 import 'package:ecoar_mobile/utils/colors.dart';
 import 'package:ecoar_mobile/widgets/tea_rate.dart';
 import 'package:flutter/material.dart';
 
-class CourseCard extends StatelessWidget {
-  final CourseModel courseModel;
+class MentoringCard extends StatelessWidget {
+  final MentoringModel mentoringModel;
   final Function action;
-  CourseCard(this.courseModel, {this.action});
+  MentoringCard(this.mentoringModel, {this.action});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,7 @@ class CourseCard extends StatelessWidget {
                 ),
                 image: DecorationImage(
                     image: CachedNetworkImageProvider(
-                      courseModel.thumbnail,
+                      mentoringModel.avatar
                     ),
                     fit: BoxFit.cover,
                     alignment: Alignment.center),
@@ -55,7 +56,7 @@ class CourseCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
-                      courseModel.title,
+                      mentoringModel.name,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 1,
                       softWrap: false,
@@ -65,7 +66,7 @@ class CourseCard extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      courseModel.description,
+                      mentoringModel.description,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       softWrap: false,
@@ -78,14 +79,14 @@ class CourseCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Text(
-                          courseModel.producer,
+                          mentoringModel.date,
                           style: TextStyle(
                             color: AppColors.MUTE,
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                           ),
                         ),
-                        TeaRate(courseModel.teaLevel)
+                        TeaRate(mentoringModel.teaLevel)
                       ],
                     ),
                   ],
