@@ -8,8 +8,8 @@ class EcoarAppBar extends PreferredSize {
   final List<Widget> leadings;
   final List<Widget> actions;
 
-  EcoarAppBar(
-    this.title, {
+  EcoarAppBar({
+    this.title,
     this.leadings = const [],
     this.actions = const [],
     this.height = 80,
@@ -42,7 +42,7 @@ class EcoarAppBar extends PreferredSize {
                   ),
                   Center(
                     child: Text(
-                      this.title,
+                      this.title ?? "",
                       style: TextStyle(
                         color: AppColors.WHITE,
                         fontSize: 16,

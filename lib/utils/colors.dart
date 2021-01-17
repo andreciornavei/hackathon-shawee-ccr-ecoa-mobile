@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class AppColors {
   // ignore: non_constant_identifier_names
+  static final MaterialColor TRANSPARENT = _factoryColor(0x00ffffff);
+  // ignore: non_constant_identifier_names
   static final MaterialColor PRIMARY_COLOR = _factoryColor(0xff2B3340);
   // ignore: non_constant_identifier_names
   static final MaterialColor BACKGROUND_COLOR = _factoryColor(0xffF6F5FA);
@@ -30,7 +32,9 @@ class AppColors {
   // ignore: non_constant_identifier_names
   static final MaterialColor ECOAR_GREEN = _factoryColor(0xff36DB89);
   // ignore: non_constant_identifier_names
-  static final MaterialColor ECOAR_YELLOW = _factoryColor(0xffFFCD3E);
+  static final MaterialColor ECOAR_YELLOW = _factoryColor(0xffFFB84C);
+  // ignore: non_constant_identifier_names
+  static final MaterialColor ECOAR_RED = _factoryColor(0xffC72A28);  
 
   static MaterialColor hex(String hex) =>
       AppColors._factoryColor(AppColors._getColorHexFromStr(hex));

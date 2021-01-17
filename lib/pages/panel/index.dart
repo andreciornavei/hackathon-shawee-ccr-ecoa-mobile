@@ -13,7 +13,18 @@ class PanelView extends StatelessWidget {
       builder: (controller) => Scaffold(
         backgroundColor: AppColors.BACKGROUND_COLOR,
         appBar: EcoarAppBar(
-          "Ecoar.app"
+          leadings: <Widget>[
+            Image.asset("assets/images/icon2.png", height: 32),
+          ],
+          actions: <Widget>[
+            Text(
+              "andre.ciornavei",
+              style: TextStyle(
+                color: AppColors.WHITE,
+                fontWeight: FontWeight.w500,
+              ),
+            )
+          ],
         ),
         body: Obx(
           () => Container(

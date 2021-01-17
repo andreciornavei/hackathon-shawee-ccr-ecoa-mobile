@@ -6,15 +6,13 @@ class Button extends StatelessWidget {
   final String label;
   final IconData icon;
   final Color backgroundColor;
-  final Color backgroundIcon;
   final Color foregroundColor;
   Button({
     this.action,
     this.label,
     this.icon,
     this.backgroundColor = Colors.transparent,
-    this.foregroundColor,
-    this.backgroundIcon 
+    this.foregroundColor
   });
 
   @override
@@ -24,9 +22,9 @@ class Button extends StatelessWidget {
       color: this.backgroundColor,
       disabledColor: AppColors.DARK.withOpacity(0.2),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(8),
+        borderRadius: BorderRadius.circular(6),
       ),
-      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 6),
+      padding: EdgeInsets.only(left: 0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -44,13 +42,14 @@ class Button extends StatelessWidget {
             ),
           ),
           Container(
-            height: 32,
-            width: 32,
+            height: 46,
+            width: 46,
             decoration: BoxDecoration(
-              color: action == null
-                  ? backgroundIcon?.withOpacity(0.3) ?? AppColors.ECOAR_ORANGE.withOpacity(0.3)
-                  : backgroundIcon ?? AppColors.ECOAR_ORANGE,
-              borderRadius: BorderRadius.circular(8),
+              color: AppColors.WHITE.withOpacity(0.2),
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(6),
+                bottomRight: Radius.circular(6)
+              ),
             ),
             child: Icon(
               this.icon,
