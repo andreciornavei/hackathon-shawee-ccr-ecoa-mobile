@@ -24,7 +24,7 @@ class AppColors {
   // ignore: non_constant_identifier_names
   static final MaterialColor SHADOW = _factoryColor(0xffE7EAF0);
   // ignore: non_constant_identifier_names
-  static final MaterialColor PURPLE = _factoryColor(0xff5F5780);
+  static final MaterialColor PURPLE = _factoryColor(0xff2A2362);
   // ignore: non_constant_identifier_names
   static final MaterialColor ECOAR_ORANGE = _factoryColor(0xffFF9166);
   // ignore: non_constant_identifier_names

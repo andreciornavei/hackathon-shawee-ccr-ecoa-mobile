@@ -8,14 +8,17 @@ class ButtonIcon extends StatelessWidget {
   final double buttonSize;
   final double iconSize;
   final MaterialColor backgroundColor;
+  final bool fullRounded;
 
-  ButtonIcon(
-      {@required this.icon,
-      this.action,
-      this.color,
-      this.buttonSize = 32,
-      this.iconSize = 21,
-      this.backgroundColor});
+  ButtonIcon({
+    @required this.icon,
+    this.action,
+    this.color,
+    this.buttonSize = 32,
+    this.iconSize = 21,
+    this.backgroundColor,
+    this.fullRounded = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +31,8 @@ class ButtonIcon extends StatelessWidget {
           borderRadius: BorderRadius.only(
             topRight: Radius.circular(6),
             bottomRight: Radius.circular(6),
+            topLeft: Radius.circular(fullRounded ? 6 : 0),
+            bottomLeft: Radius.circular(fullRounded ? 6 : 0)
           ),
         ),
         color: backgroundColor ?? AppColors.TRANSPARENT,

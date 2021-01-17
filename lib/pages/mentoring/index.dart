@@ -17,7 +17,7 @@ class MentoringView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               H1("Mentorias"),
-              P("Agente sua mentoria com nossos colaboradores")
+              P("Agende sua mentoria com nossos colaboradores")
             ],
           ),
         );

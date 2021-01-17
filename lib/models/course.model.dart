@@ -1,3 +1,4 @@
+import 'package:ecoar_mobile/models/section.model.dart';
 import 'package:get/get.dart';
 
 class CourseModel {
@@ -8,6 +9,7 @@ class CourseModel {
     String producer,
     String thumbnail,
     int teaLevel,
+    List<SectionModel> sections
   }) {
     this.id = id;
     this.title = title;
@@ -15,6 +17,7 @@ class CourseModel {
     this.producer = producer;
     this.teaLevel = teaLevel;
     this.thumbnail = thumbnail;
+    this.sections = sections;
   }
   RxInt _id = RxInt();
   set id(int value) => _id.value = value;
@@ -39,4 +42,8 @@ class CourseModel {
   RxInt _teaLevel = RxInt();
   set teaLevel(int value) => _teaLevel.value = value;
   int get teaLevel => _teaLevel.value;
+
+  RxList<SectionModel> _sections = RxList<SectionModel>();
+  set sections(List<SectionModel> value) => _sections.value = value;
+  List<SectionModel> get sections => _sections.value;
 }
