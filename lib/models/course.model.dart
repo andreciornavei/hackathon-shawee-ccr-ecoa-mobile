@@ -1,5 +1,5 @@
-import 'package:ecoar_mobile/models/section.model.dart';
 import 'package:get/get.dart';
+import 'section.model.dart';
 
 class CourseModel {
   CourseModel({
