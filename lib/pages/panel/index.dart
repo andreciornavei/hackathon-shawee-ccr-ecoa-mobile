@@ -18,7 +18,7 @@ class PanelView extends StatelessWidget {
           ],
           actions: <Widget>[
             Text(
-              "andre.ciornavei",
+              "john.doe",
               style: TextStyle(
                 color: AppColors.WHITE,
                 fontWeight: FontWeight.w500,
